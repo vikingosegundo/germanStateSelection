@@ -15,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let homeViewController = ViewController()
+
+        if
+            let views = Bundle.main.loadNibNamed("StateSelectionView", owner: nil, options: nil),
+            let view = views.first as? StateSelectionView
+        {
+            homeViewController.stateSelectionView = view
+        }
+
+        window!.rootViewController = homeViewController
+        window!.makeKeyAndVisible()
         return true
     }
 

@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64388F1E228C6B4700EA2EC2 /* StateSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64388F1D228C6B4700EA2EC2 /* StateSelectionView.xib */; };
+		64388F20228C707A00EA2EC2 /* StateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64388F1F228C707A00EA2EC2 /* StateSelectionView.swift */; };
 		64B74F682289BFCE00085004 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B74F672289BFCE00085004 /* AppDelegate.swift */; };
 		64B74F6A2289BFCE00085004 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B74F692289BFCE00085004 /* ViewController.swift */; };
-		64B74F6D2289BFCE00085004 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B74F6B2289BFCE00085004 /* Main.storyboard */; };
 		64B74F6F2289BFD100085004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64B74F6E2289BFD100085004 /* Assets.xcassets */; };
 		64B74F722289BFD100085004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B74F702289BFD100085004 /* LaunchScreen.storyboard */; };
 		64B74F7E2289D26900085004 /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B74F7D2289D26800085004 /* OBShapedButton.m */; };
@@ -17,10 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64388F1D228C6B4700EA2EC2 /* StateSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateSelectionView.xib; sourceTree = "<group>"; };
+		64388F1F228C707A00EA2EC2 /* StateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateSelectionView.swift; sourceTree = "<group>"; };
 		64B74F642289BFCE00085004 /* GermanStateSelection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GermanStateSelection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B74F672289BFCE00085004 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64B74F692289BFCE00085004 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		64B74F6C2289BFCE00085004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64B74F6E2289BFD100085004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64B74F712289BFD100085004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64B74F732289BFD100085004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		64B74F5B2289BFCE00085004 = {
 			isa = PBXGroup;
 			children = (
+				64388F1F228C707A00EA2EC2 /* StateSelectionView.swift */,
+				64388F1D228C6B4700EA2EC2 /* StateSelectionView.xib */,
 				64B74F802289D3F500085004 /* UIImage+ColorAtPixel.h */,
 				64B74F7F2289D3F500085004 /* UIImage+ColorAtPixel.m */,
 				64B74F7C2289D26800085004 /* OBShapedButton.h */,
@@ -68,7 +72,6 @@
 			children = (
 				64B74F672289BFCE00085004 /* AppDelegate.swift */,
 				64B74F692289BFCE00085004 /* ViewController.swift */,
-				64B74F6B2289BFCE00085004 /* Main.storyboard */,
 				64B74F6E2289BFD100085004 /* Assets.xcassets */,
 				64B74F702289BFD100085004 /* LaunchScreen.storyboard */,
 				64B74F732289BFD100085004 /* Info.plist */,
@@ -136,8 +139,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				64B74F722289BFD100085004 /* LaunchScreen.storyboard in Resources */,
+				64388F1E228C6B4700EA2EC2 /* StateSelectionView.xib in Resources */,
 				64B74F6F2289BFD100085004 /* Assets.xcassets in Resources */,
-				64B74F6D2289BFCE00085004 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64388F20228C707A00EA2EC2 /* StateSelectionView.swift in Sources */,
 				64B74F6A2289BFCE00085004 /* ViewController.swift in Sources */,
 				64B74F7E2289D26900085004 /* OBShapedButton.m in Sources */,
 				64B74F682289BFCE00085004 /* AppDelegate.swift in Sources */,
@@ -158,14 +162,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		64B74F6B2289BFCE00085004 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				64B74F6C2289BFCE00085004 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		64B74F702289BFD100085004 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

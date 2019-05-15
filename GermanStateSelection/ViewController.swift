@@ -8,30 +8,56 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, StateSelectionViewDelegate{
 
-    @IBOutlet weak var selectLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    var stateSelectionView: StateSelectionView! { didSet { setup() } }
+    var selectedLabel = UILabel()
+
+    func setup() {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        stateSelectionView.translatesAutoresizingMaskIntoConstraints = false
+        selectedLabel.translatesAutoresizingMaskIntoConstraints = false
+        selectedLabel.textAlignment = .center
+        
+        view.backgroundColor = .white
+        view.addSubview(stateSelectionView)
+        view.addSubview(selectedLabel)
+
+        NSLayoutConstraint.activate([
+            stateSelectionView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor),
+            stateSelectionView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
+            stateSelectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stateSelectionView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ]
+        )
+
+        NSLayoutConstraint.activate([
+            stateSelectionView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            stateSelectionView.heightAnchor.constraint(equalTo: view.heightAnchor)
+            ].map{
+                $0.priority = UILayoutPriority(900)
+                return $0
+            }
+        )
+
+
+        NSLayoutConstraint.activate([
+            selectedLabel.heightAnchor.constraint(equalToConstant: 24),
+            selectedLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            selectedLabel.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
+            selectedLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            ]
+        )
+
+
+
+        stateSelectionView.delegate = self
     }
 
-    @IBAction func ndsTapped(_ sender: Any) {
-        selectLabel.text = "Niedersachsen"
-    }
-
-    @IBAction func hessenTapped(_ sender: Any) {
-        selectLabel.text = "Hessen"
-    }
-
-    @IBAction func nrwTapped(_ sender: Any) {
-        selectLabel.text = "Nordrhein-Westfahlen"
+    func didSelect(stateName: String, on: StateSelectionView) {
+        selectedLabel.text = stateName
 
     }
 
-    @IBAction func saanTapped(_ sender: Any) {
-        selectLabel.text = "Sachsen-Anhalt"
-
-    }
 }
 
