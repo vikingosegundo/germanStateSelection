@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 protocol StateSelectionViewDelegate: class {
     func didSelect(stateName:String, on: StateSelectionView)
 }
